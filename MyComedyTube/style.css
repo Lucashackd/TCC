@@ -15,6 +15,7 @@ nav ul {
   align-items: center;
   padding-left: 1rem;
   padding-right: 1rem;
+  max-height: 55px;
 }
 
 nav ul li button {

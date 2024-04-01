@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+nav {
+  background-color: #191919;
+}
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+nav ul li button {
+  background-image: url("./public/src/images/logo.svg");
+  background-color: #e00e4d;
+  background-size: contain;
+  background-origin: border-box;
+  background-repeat: no-repeat;
+  background-position: 0%;
+  border-style: none;
+  border-radius: 50%;
+}
+
+nav ul li button:hover {
+  cursor: pointer;
+}

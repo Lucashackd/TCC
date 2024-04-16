@@ -3,6 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
     <title>My Comedy Tube</title>
   </head>
   <body>
@@ -13,27 +18,59 @@
             <li>
               <a href="index.html">
                 <img
-                  src="./public/src/images/logo.svg"
+                  class="logo-full"
+                  src="./src/images/logo-full.svg"
                   alt="logo"
-                  height="85px"
                 />
               </a>
             </li>
             <li>
-              <input
-                type="search"
-                name="searchBar"
-                id="searchBar"
-                style="height: 30px"
-              />
+              <div class="search-container">
+                <input type="search" class="search-bar" />
+                <button>
+                  <span class="material-symbols-outlined"> search </span>
+                </button>
+              </div>
             </li>
             <li>
-              <button style="width: 36px; height: 36px"></button>
+              <button>
+                <span class="material-symbols-outlined"> account_circle </span>
+                Fazer login
+              </button>
             </li>
           </ul>
         </nav>
       </header>
+
+      <main>
+        <div class="feed-container">
+          <div class="feed-options">
+            <ul class="feed-filter">
+              <li class="filter-option">
+                <span class="material-symbols-outlined"> subscriptions </span>
+                Inscrições
+              </li>
+              <li class="filter-option">
+                <span class="material-symbols-outlined"> history </span>
+                Histórico
+              </li>
+              <li class="filter-option">
+                <span class="material-symbols-outlined"> favorite </span>
+                Favoritos
+              </li>
+            </ul>
+          </div>
+          <div class="banner-info">
+            <img src="./src/images/banner.png" alt="" />
+          </div>
+
+          <div class="feed-content">
+            <div class="feed-cuts"></div>
+            <div class="feed-videos"></div>
+          </div>
+        </div>
+      </main>
     </div>
-    <script type="module" src="/main.js"></script>
+    <!-- <script type="module" src="/main.js"></script> -->
   </body>
 </html>

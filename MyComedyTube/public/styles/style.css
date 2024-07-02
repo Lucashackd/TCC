@@ -33,6 +33,23 @@ nav ul {
   height: 56px;
 }
 
+nav ul li.navigation-menu {
+  width: calc(100% / 3);
+  display: flex;
+}
+
+nav ul li.navigation-menu.navigation-menu-logo {
+  justify-content: flex-start;
+}
+
+nav ul li.navigation-menu.navigation-menu-searchBar {
+  justify-content: center;
+}
+
+nav ul li.navigation-menu.navigation-menu-profile {
+  justify-content: flex-end;
+}
+
 nav ul li .logo-full {
   max-height: 40px;
 }

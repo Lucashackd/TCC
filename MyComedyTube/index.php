@@ -14,12 +14,12 @@
     <header>
       <nav>
         <ul>
-          <li>
-            <a href="index.html">
+          <li class="navigation-menu navigation-menu-logo">
+            <a href="index.php">
               <img class="logo-full" src="public/src/images/logo-full.svg" alt="logo" />
             </a>
           </li>
-          <li>
+          <li class="navigation-menu navigation-menu-searchBar">
             <div class="search-container">
               <input type="search" class="search-bar" />
               <button>
@@ -27,7 +27,7 @@
               </button>
             </div>
           </li>
-          <li>
+          <li class="navigation-menu navigation-menu-profile">
             <button>
               <span class="material-symbols-outlined"> account_circle </span>
               Fazer login

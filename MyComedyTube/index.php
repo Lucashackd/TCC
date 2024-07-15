@@ -16,7 +16,7 @@
         <ul>
           <li class="navigation-menu navigation-menu-logo">
             <a href="index.php">
-              <img class="logo-full" src="public/src/images/logo-full.svg" alt="logo" />
+              <img class="logo-short" src="public/src/images/logo-short.svg" alt="logo" />
             </a>
           </li>
           <li class="navigation-menu navigation-menu-searchBar">

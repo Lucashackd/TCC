@@ -16,12 +16,12 @@
         <ul>
           <li class="navigation-menu navigation-menu-logo">
             <a href="index.php">
-              <img class="logo-short" src="public/src/images/logo-short.svg" alt="logo" />
+              <img class="logo-full" src="public/src/images/logo-full.svg" alt="logo" />
             </a>
           </li>
           <li class="navigation-menu navigation-menu-searchBar">
             <div class="search-container">
-              <input type="search" class="search-bar" />
+              <input type="search" class="search-bar" placeholder="Pesquisar" />
               <button>
                 <span class="material-symbols-outlined"> search </span>
               </button>

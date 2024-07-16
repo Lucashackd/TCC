@@ -42,6 +42,11 @@ nav ul li.navigation-menu.navigation-menu-logo {
   justify-content: flex-start;
 }
 
+nav ul li.navigation-menu.navigation-menu-logo a {
+  display: flex;
+  align-items: center;
+}
+
 nav ul li.navigation-menu.navigation-menu-searchBar {
   justify-content: center;
 }
@@ -50,7 +55,8 @@ nav ul li.navigation-menu.navigation-menu-profile {
   justify-content: flex-end;
 }
 
-nav ul li .logo-short {
+nav ul li .logo-short,
+nav ul li .logo-full {
   max-height: 40px;
 }
 
@@ -103,7 +109,7 @@ nav ul li button {
   border: 1px solid #404040;
   border-radius: 16px;
   background: transparent;
-  color: #FFD700;
+  color: #ffd700;
 }
 
 nav ul li button:hover {
@@ -172,7 +178,7 @@ main {
   .feed-filter
   .filter-option
   .material-symbols-outlined {
-  color: #FFD700;
+  color: #ffd700;
 }
 
 .feed-container .banner-info {
@@ -213,7 +219,7 @@ main {
 
 .feed-container .feed-content button.select-video:hover {
   cursor: pointer;
-  background-color: #FFD70008;
+  background-color: #ffd70008;
 }
 
 .feed-container .feed-content button.select-video .feed-video {

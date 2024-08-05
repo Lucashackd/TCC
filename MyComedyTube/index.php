@@ -71,16 +71,16 @@
               </div>
 
               <div class="video-info">
-                <div class="video-title">
-                  <h1>Miguelito manda a real sobre a relação entre peitos e a sociedade capitalista</h1>
-                </div>
+                <span class="video-title">
+                  Miguelito mamou geral na sala de aula e olha no que deu! kkkkkkkkk mt engrasado piadas memes
+                </span>
                 <div class="channel-info">
                   <div class="channel-logo">
-                    A
+                    <img class="feed-avatar" src="public/src/images/clebinho.jpg" alt="avatar">
                   </div>
-                  <div class="channel-name">
-                    Disney
-                  </div>
+                  <span class="channel-name">
+                    Clebinho
+                  </span>
                 </div>
                 <div class="date"></div>
               </div>

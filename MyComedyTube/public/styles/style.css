@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 * {
   box-sizing: border-box;
@@ -227,22 +228,24 @@ main {
 .feed-container .feed-content button.select-video .feed-video {
   height: 310px;
   width: 350px;
+  overflow: hidden;
 }
 
 .feed-container .feed-content button.select-video .feed-video .thumbnail {
   aspect-ratio: 16/9;
   width: 100%;
-  text-align: start;
+  height: 196.875px;
+  /* text-align: start; */
   border-radius: 8px;
 }
 
-.feed-container .feed-content .feed-video .thumbnail .video-thumbnail {
+.feed-container .feed-content .select-video .feed-video .thumbnail .video-thumbnail {
   width: 100%;
   height: 100%;
   border-radius: inherit;
 }
 
-.feed-container .feed-content .feed-video .thumbnail .video-duration-position {
+.feed-container .feed-content .select-video .feed-video .thumbnail .video-duration-position {
   position: relative;
   bottom: 24px;
   left: 225px;
@@ -255,6 +258,7 @@ main {
 
 .feed-container
   .feed-content
+  .select-video
   .feed-video
   .thumbnail
   .video-duration-position
@@ -272,4 +276,54 @@ main {
   font-family: "Lato", sans-serif;
   font-weight: 700;
   letter-spacing: 0.75px;
+}
+
+.feed-content .select-video .feed-video .video-info {
+  height: calc(100% - 204.883px);
+  margin-top: 8px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.feed-content .select-video .feed-video .video-info .video-title {
+  width: 100%;
+  height: 60px;
+  overflow:hidden;
+  line-height: 1;
+  align-self: center;
+  text-align: start;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #fff;
+}
+
+.feed-content .select-video .feed-video .video-info .channel-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.feed-content .select-video .feed-video .video-info .channel-info .channel-logo {
+  width: 25px;
+  height: 25px;
+}
+
+.feed-content .select-video .feed-video .video-info .channel-info .channel-logo .feed-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  object-fit: contain;
+}
+
+.feed-content .select-video .feed-video .video-info .channel-info .channel-name {
+  text-align: start;
+  font-family: 'Lobster Two', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  max-height: 20px;
+  color: #c0c0c0;
+  overflow: hidden;
+  margin-left: 8px;
 }

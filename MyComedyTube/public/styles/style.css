@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 * {
   box-sizing: border-box;
@@ -13,7 +13,7 @@ body {
   width: 100%;
   text-align: center;
   min-height: 100vh;
-  background-color: #202020;
+  background-color: #c7edff;
 }
 
 #app {
@@ -22,7 +22,7 @@ body {
 }
 
 nav {
-  background-color: #191919;
+  background-color: #ffd700;
 }
 
 nav ul {
@@ -75,8 +75,8 @@ nav ul li .search-bar {
   width: 90%;
   height: 100%;
   border-radius: 16px 0 0 16px;
-  border: 1px solid #404040;
-  background-color: #202020;
+  border: 1px solid #000;
+  background-color: #e6e6fa;
   color: #c0c0c0;
   padding: 0 16px;
 }
@@ -86,11 +86,11 @@ nav ul li .search-container button {
   height: 100%;
   text-align: center;
   line-height: 40px;
-  background-color: #303030;
-  border: 1px solid #404040;
+  background-color: #ff6347;
+  border: 1px solid #000;
   border-left: none;
   border-radius: 0 16px 16px 0;
-  color: #c0c0c0;
+  color: #000;
 }
 
 nav ul li .search-container button:hover {
@@ -109,10 +109,10 @@ nav ul li button {
   align-items: center;
   gap: 4px;
   padding: 10px;
-  border: 1px solid #404040;
+  border: 1px solid #000;
+  background-color: #ffd700;
   border-radius: 16px;
-  background: transparent;
-  color: #ffd700;
+  color: #000;
 }
 
 nav ul li button:hover {
@@ -127,22 +127,20 @@ main {
 }
 
 .feed-container {
-  /* border: 1px solid red; */
   height: 100%;
 }
 
 .feed-container .feed-options {
-  /* border: 1px solid green; */
   display: flex;
   justify-content: center;
   width: 100%;
   min-width: 200px;
   height: 40px;
-  margin-top: 8px;
+  margin-top: 16px;
+  margin-bottom: 32px;
 }
 
 .feed-container .feed-options .feed-filter {
-  /* border: 1px solid yellow; */
   list-style: none;
   display: flex;
   flex-direction: row;
@@ -156,8 +154,8 @@ main {
   font-family: Inter, Arial, Helvetica, sans-serif;
   font-size: 14px;
   font-weight: 400;
-  color: #f2f2f2;
-  background-color: #191919;
+  color: #000;
+  background-color: #ff6347;
   border-radius: 8px;
 }
 
@@ -173,7 +171,7 @@ main {
 
 .feed-container .feed-options .feed-filter .filter-option:hover {
   cursor: pointer;
-  background-color: #202020;
+  background-color: #ff6347;
 }
 
 .feed-container
@@ -181,29 +179,10 @@ main {
   .feed-filter
   .filter-option
   .material-symbols-outlined {
-  color: #ffd700;
-}
-
-.feed-container .banner-info {
-  /* border: 1px solid white; */
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  height: fit-content;
-  max-height: 340px;
-  margin: 24px;
-  width: calc(100% - margin);
-}
-
-.feed-container .banner-info img {
-  /* border: 3px solid #f2f2f2; */
-  border-radius: 16px;
-  box-shadow: 0 0 5px #c0c0c0;
+  color: #98fb98;
 }
 
 .feed-container .feed-content {
-  /* border: 1px solid pink; */
   height: fit-content;
   display: flex;
   flex-direction: row;
@@ -222,7 +201,7 @@ main {
 
 .feed-container .feed-content button.select-video:hover {
   cursor: pointer;
-  background-color: #ffd70008;
+  background-color: #fff;
 }
 
 .feed-container .feed-content button.select-video .feed-video {
@@ -239,13 +218,23 @@ main {
   border-radius: 8px;
 }
 
-.feed-container .feed-content .select-video .feed-video .thumbnail .video-thumbnail {
+.feed-container
+  .feed-content
+  .select-video
+  .feed-video
+  .thumbnail
+  .video-thumbnail {
   width: 100%;
   height: 100%;
   border-radius: inherit;
 }
 
-.feed-container .feed-content .select-video .feed-video .thumbnail .video-duration-position {
+.feed-container
+  .feed-content
+  .select-video
+  .feed-video
+  .thumbnail
+  .video-duration-position {
   position: relative;
   bottom: 24px;
   left: 225px;
@@ -279,24 +268,26 @@ main {
 }
 
 .feed-content .select-video .feed-video .video-info {
-  height: calc(100% - 204.883px);
+  height: fit-content;
+  max-height: calc(100% - 204.883px);
   margin-top: 8px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 16px;
   flex-direction: column;
 }
 
 .feed-content .select-video .feed-video .video-info .video-title {
   width: 100%;
-  height: 60px;
-  overflow:hidden;
+  max-height: 60px;
+  overflow: hidden;
   line-height: 1;
   align-self: center;
   text-align: start;
   font-family: "Lato", sans-serif;
   font-weight: 700;
   font-size: 18px;
-  color: #fff;
+  color: #000;
 }
 
 .feed-content .select-video .feed-video .video-info .channel-info {
@@ -304,26 +295,83 @@ main {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-}
-.feed-content .select-video .feed-video .video-info .channel-info .channel-logo {
-  width: 25px;
-  height: 25px;
+  width: 100%;
+  height: 30px;
 }
 
-.feed-content .select-video .feed-video .video-info .channel-info .channel-logo .feed-avatar {
-  width: 100%;
-  height: 100%;
+.feed-content
+  .select-video
+  .feed-video
+  .video-info
+  .channel-info
+  .channel-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.feed-content
+  .select-video
+  .feed-video
+  .video-info
+  .channel-info
+  .channel-logo
+  .feed-avatar {
+  width: 25px;
+  height: 25px;
   border-radius: 100%;
   object-fit: contain;
 }
 
-.feed-content .select-video .feed-video .video-info .channel-info .channel-name {
+.feed-content
+  .select-video
+  .feed-video
+  .video-info
+  .channel-info
+  .channel-name {
   text-align: start;
-  font-family: 'Lobster Two', sans-serif;
+  font-family: "Lobster Two", sans-serif;
   font-size: 1rem;
   font-weight: 700;
+  width: 100%;
   max-height: 20px;
-  color: #c0c0c0;
+  color: #ff6347;
   overflow: hidden;
-  margin-left: 8px;
+  margin: 0 8px;
+}
+
+.feed-content .select-video .feed-video .video-info .channel-info .feed-date {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2px;
+  padding: 3px 4px;
+  border-radius: 12px;
+  background-color: #98fb98;
+}
+
+.feed-content
+  .select-video
+  .feed-video
+  .video-info
+  .channel-info
+  .feed-date
+  .material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 20;
+  font-size: 0.7rem;
+  color: #000;
+}
+
+.feed-content
+  .select-video
+  .feed-video
+  .video-info
+  .channel-info
+  .feed-date
+  .video-date {
+  font-family: "Lato", sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #000;
 }

@@ -55,9 +55,6 @@
             </li>
           </ul>
         </div>
-        <div class="banner-info">
-          <img src="public/src/images/banner.png" alt="" />
-        </div>
 
         <div class="feed-content">
           <button class="select-video">
@@ -72,7 +69,7 @@
 
               <div class="video-info">
                 <span class="video-title">
-                  Miguelito mamou geral na sala de aula e olha no que deu! kkkkkkkkk mt engrasado piadas memes
+                  Miguelito piadas e memes haha
                 </span>
                 <div class="channel-info">
                   <div class="channel-logo">
@@ -81,10 +78,138 @@
                   <span class="channel-name">
                     Clebinho
                   </span>
+                  <div class="feed-date">
+                    <span class="material-symbols-outlined">
+                      calendar_today
+                    </span>
+                    <span class="video-date">25/12/0000</span>
+                  </div>
                 </div>
-                <div class="date"></div>
               </div>
-            </div>
+          </button>
+
+          <button class="select-video">
+            <div class="feed-video">
+              <div class="thumbnail">
+                <img class="video-thumbnail" src="public/src/images/teste-mini.png" alt="">
+                <div class="video-duration-position">
+                  <span class="video-duration-info">21:39</span>
+                </div>
+
+              </div>
+
+              <div class="video-info">
+                <span class="video-title">
+                  Miguelito piadas e memes haha
+                </span>
+                <div class="channel-info">
+                  <div class="channel-logo">
+                    <img class="feed-avatar" src="public/src/images/clebinho.jpg" alt="avatar">
+                  </div>
+                  <span class="channel-name">
+                    Clebinho
+                  </span>
+                  <div class="feed-date">
+                    <span class="material-symbols-outlined">
+                      calendar_today
+                    </span>
+                    <span class="video-date">25/12/0000</span>
+                  </div>
+                </div>
+              </div>
+          </button>
+
+          <button class="select-video">
+            <div class="feed-video">
+              <div class="thumbnail">
+                <img class="video-thumbnail" src="public/src/images/teste-mini.png" alt="">
+                <div class="video-duration-position">
+                  <span class="video-duration-info">21:39</span>
+                </div>
+
+              </div>
+
+              <div class="video-info">
+                <span class="video-title">
+                  Miguelito piadas e memes haha
+                </span>
+                <div class="channel-info">
+                  <div class="channel-logo">
+                    <img class="feed-avatar" src="public/src/images/clebinho.jpg" alt="avatar">
+                  </div>
+                  <span class="channel-name">
+                    Clebinho
+                  </span>
+                  <div class="feed-date">
+                    <span class="material-symbols-outlined">
+                      calendar_today
+                    </span>
+                    <span class="video-date">25/12/0000</span>
+                  </div>
+                </div>
+              </div>
+          </button>
+
+          <button class="select-video">
+            <div class="feed-video">
+              <div class="thumbnail">
+                <img class="video-thumbnail" src="public/src/images/teste-mini.png" alt="">
+                <div class="video-duration-position">
+                  <span class="video-duration-info">21:39</span>
+                </div>
+
+              </div>
+
+              <div class="video-info">
+                <span class="video-title">
+                  Miguelito piadas e memes haha teste teste testeteste teste testeteste teste testeteste teste teste
+                </span>
+                <div class="channel-info">
+                  <div class="channel-logo">
+                    <img class="feed-avatar" src="public/src/images/clebinho.jpg" alt="avatar">
+                  </div>
+                  <span class="channel-name">
+                    Clebinho
+                  </span>
+                  <div class="feed-date">
+                    <span class="material-symbols-outlined">
+                      calendar_today
+                    </span>
+                    <span class="video-date">25/12/2024</span>
+                  </div>
+                </div>
+              </div>
+          </button>
+
+          <button class="select-video">
+            <div class="feed-video">
+              <div class="thumbnail">
+                <img class="video-thumbnail" src="public/src/images/teste-mini.png" alt="">
+                <div class="video-duration-position">
+                  <span class="video-duration-info">21:39</span>
+                </div>
+
+              </div>
+
+              <div class="video-info">
+                <span class="video-title">
+                  Miguelito piadas e memes haha teste teste teste
+                </span>
+                <div class="channel-info">
+                  <div class="channel-logo">
+                    <img class="feed-avatar" src="public/src/images/clebinho.jpg" alt="avatar">
+                  </div>
+                  <span class="channel-name">
+                    Clebinho
+                  </span>
+                  <div class="feed-date">
+                    <span class="material-symbols-outlined">
+                      calendar_today
+                    </span>
+                    <span class="video-date">25/12/0000</span>
+                  </div>
+                </div>
+              </div>
           </button>
         </div>
       </div>

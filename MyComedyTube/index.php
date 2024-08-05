@@ -16,7 +16,7 @@
         <ul>
           <li class="navigation-menu navigation-menu-logo">
             <a href="index.php">
-              <img class="logo-full" src="public/src/images/logo-full.svg" alt="logo" />
+              <img class="logo-full" src="public/src/images/logo.svg" alt="logo" />
             </a>
           </li>
           <li class="navigation-menu navigation-menu-searchBar">
@@ -64,128 +64,28 @@
             <div class="feed-video">
               <div class="thumbnail">
                 <img class="video-thumbnail" src="public/src/images/teste-mini.png" alt="">
-                <div class="play-icon">
-                  <span class="material-symbols-outlined"> play_arrow </span>
+                <div class="video-duration-position">
+                  <span class="video-duration-info">21:39</span>
                 </div>
-                <span class="video-duration"></span>
+
               </div>
 
               <div class="video-info">
-                <div class="video-title"></div>
+                <div class="video-title">
+                  <h1>Miguelito manda a real sobre a relação entre peitos e a sociedade capitalista</h1>
+                </div>
                 <div class="channel-info">
-                  <div class="channel-logo"></div>
-                  <div class="channel-name"></div>
+                  <div class="channel-logo">
+                    A
+                  </div>
+                  <div class="channel-name">
+                    Disney
+                  </div>
                 </div>
                 <div class="date"></div>
               </div>
             </div>
           </button>
-
-          <button class="select-video">
-            <div class="feed-video">
-              <div class="thumbnail">
-                <img class="video-thumbnail" src="public/src/images/teste-mini.png" alt="">
-                <div class="play-icon">
-                  <span class="material-symbols-outlined"> play_arrow </span>
-                </div>
-                <span class="video-duration"></span>
-              </div>
-
-              <div class="video-info">
-                <div class="video-title"></div>
-                <div class="channel-info">
-                  <div class="channel-logo"></div>
-                  <div class="channel-name"></div>
-                </div>
-                <div class="date"></div>
-              </div>
-            </div>
-          </button>
-
-          <button class="select-video">
-            <div class="feed-video">
-              <div class="thumbnail">
-                <img class="video-thumbnail" src="public/src/images/teste-mini.png" alt="">
-                <div class="play-icon">
-                  <span class="material-symbols-outlined"> play_arrow </span>
-                </div>
-                <span class="video-duration"></span>
-              </div>
-
-              <div class="video-info">
-                <div class="video-title"></div>
-                <div class="channel-info">
-                  <div class="channel-logo"></div>
-                  <div class="channel-name"></div>
-                </div>
-                <div class="date"></div>
-              </div>
-            </div>
-          </button>
-
-          <button class="select-video">
-            <div class="feed-video">
-              <div class="thumbnail">
-                <img class="video-thumbnail" src="public/src/images/teste-mini.png" alt="">
-                <div class="play-icon">
-                  <span class="material-symbols-outlined"> play_arrow </span>
-                </div>
-                <span class="video-duration"></span>
-              </div>
-
-              <div class="video-info">
-                <div class="video-title"></div>
-                <div class="channel-info">
-                  <div class="channel-logo"></div>
-                  <div class="channel-name"></div>
-                </div>
-                <div class="date"></div>
-              </div>
-            </div>
-          </button>
-
-          <button class="select-video">
-            <div class="feed-video">
-              <div class="thumbnail">
-                <img class="video-thumbnail" src="public/src/images/teste-mini.png" alt="">
-                <div class="play-icon">
-                  <span class="material-symbols-outlined"> play_arrow </span>
-                </div>
-                <span class="video-duration"></span>
-              </div>
-
-              <div class="video-info">
-                <div class="video-title"></div>
-                <div class="channel-info">
-                  <div class="channel-logo"></div>
-                  <div class="channel-name"></div>
-                </div>
-                <div class="date"></div>
-              </div>
-            </div>
-          </button>
-
-          <button class="select-video">
-            <div class="feed-video">
-              <div class="thumbnail">
-                <img class="video-thumbnail" src="public/src/images/teste-mini.png" alt="">
-                <div class="play-icon">
-                  <span class="material-symbols-outlined"> play_arrow </span>
-                </div>
-                <span class="video-duration"></span>
-              </div>
-
-              <div class="video-info">
-                <div class="video-title"></div>
-                <div class="channel-info">
-                  <div class="channel-logo"></div>
-                  <div class="channel-name"></div>
-                </div>
-                <div class="date"></div>
-              </div>
-            </div>
-          </button>
-
         </div>
       </div>
     </main>

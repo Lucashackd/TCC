@@ -1,0 +1,176 @@
+{
+    "data": [
+        {
+            "title": "Obesidade",
+            "description": "Obesidade é uma condição médica em que o excesso de gordura corporal acumulada pode ter um impacto negativo na saúde."
+        },
+        {
+            "title": "Anorexia",
+            "description": "Anorexia é um transtorno alimentar em que uma pessoa tem uma preocupação excessiva com o peso e a forma do corpo."
+        },
+        {
+            "title": "Bulimia",
+            "description": "Bulimia é um transtorno alimentar em que uma pessoa come grandes quantidades de alimentos e depois tenta se livrar das calorias consumidas."
+        },
+        {
+            "title": "Depressão",
+            "description": "Depressão é um transtorno de humor em que uma pessoa tem sentimentos de tristeza, perda ou raiva que interferem na vida diária."
+        },
+        {
+            "title": "Ansiedade",
+            "description": "Ansiedade é um transtorno de humor em que uma pessoa tem sentimentos de preocupação, medo ou nervosismo que interferem na vida diária."
+        },
+        {
+            "title": "Esquizofrenia",
+            "description": "Esquizofrenia é um transtorno mental em que uma pessoa tem dificuldade em distinguir entre a realidade e a imaginação."
+        },
+        {
+            "title": "Transtorno Bipolar",
+            "description": "Transtorno bipolar é um transtorno de humor em que uma pessoa tem mudanças extremas de humor, energia e atividade."
+        },
+        {
+            "title": "Transtorno de Personalidade Borderline",
+            "description": "Transtorno de personalidade borderline é um transtorno de personalidade em que uma pessoa tem dificuldade em regular as emoções e os relacionamentos."
+        },
+        {
+            "title": "Transtorno de Personalidade Antissocial",
+            "description": "Transtorno de personalidade antissocial é um transtorno de personalidade em que uma pessoa tem dificuldade em seguir as normas sociais e legais."
+        },
+        {
+            "title": "Transtorno de Personalidade Narcisista",
+            "description": "Transtorno de personalidade narcisista é um transtorno de personalidade em que uma pessoa tem um senso exagerado de importância e necessidade de atenção."
+        },
+        {
+            "title": "Transtorno de Personalidade Esquiva",
+            "description": "Transtorno de personalidade esquiva é um transtorno de personalidade em que uma pessoa tem dificuldade em se relacionar com os outros e se sente inadequada."
+        },
+        {
+            "title": "Síndrome de Down",
+            "description": "A síndrome de Down é uma condição genética em que uma pessoa nasce com um cromossomo extra."
+        },
+        {
+            "title": "Nanismo",
+            "description": "Nanismo é uma condição médica em que uma pessoa é significativamente menor do que a média para a sua idade e sexo."
+        },
+        {
+            "title": "Gigantismo",
+            "description": "Gigantismo é uma condição médica em que uma pessoa é significativamente maior do que a média para a sua idade e sexo."
+        },
+        {
+            "title": "Síndrome de Asperger",
+            "description": "A síndrome de Asperger é um transtorno do desenvolvimento que afeta a comunicação e o comportamento de uma pessoa."
+        },
+        {
+            "title": "Autismo",
+            "description": "O autismo é um transtorno do desenvolvimento que afeta a comunicação e o comportamento de uma pessoa."
+        },
+        {
+            "title": "Deficiência Visual",
+            "description": "Deficiência visual é uma condição em que uma pessoa tem dificuldade em ver ou não consegue ver."
+        },
+        {
+            "title": "Deficiência Auditiva",
+            "description": "Deficiência auditiva é uma condição em que uma pessoa tem dificuldade em ouvir ou não consegue ouvir."
+        },
+        {
+            "title": "Deficiência Física",
+            "description": "Deficiência física é uma condição em que uma pessoa tem dificuldade em se mover ou não consegue se mover."
+        },
+        {
+            "title": "Deficiência Intelectual",
+            "description": "Deficiência intelectual é uma condição em que uma pessoa tem dificuldade em aprender ou não consegue aprender."
+        },
+        {
+            "title": "Deficiência Múltipla",
+            "description": "Deficiência múltipla é uma condição em que uma pessoa tem mais de uma deficiência."
+        },
+        {
+            "title": "Cristianismo",
+            "description": "Cristianismo é uma religião baseada na vida e nos ensinamentos de Jesus Cristo."
+        },
+        {
+            "title": "Islamismo",
+            "description": "Islamismo é uma religião baseada nos ensinamentos do profeta Maomé."
+        },
+        {
+            "title": "Judaísmo",
+            "description": "Judaísmo é uma religião baseada nos ensinamentos da Torá."
+        },
+        {
+            "title": "Hinduísmo",
+            "description": "Hinduísmo é uma religião baseada nos Vedas."
+        },
+        {
+            "title": "Budismo",
+            "description": "Budismo é uma religião baseada nos ensinamentos de Buda."
+        },
+        {
+            "title": "Raça Negra",
+            "description": "Raça negra é um grupo de pessoas que compartilham características físicas semelhantes, como a cor da pele."
+        },
+        {
+            "title": "Raça Branca",
+            "description": "Raça branca é um grupo de pessoas que compartilham características físicas semelhantes, como a cor da pele."
+        },
+        {
+            "title": "Raça Amarela",
+            "description": "Raça amarela é um grupo de pessoas que compartilham características físicas semelhantes, como a cor da pele."
+        },
+        {
+            "title": "Raça Indígena",
+            "description": "Raça indígena é um grupo de pessoas que compartilham características físicas semelhantes, como a cor da pele."
+        },
+        {
+            "title": "Raça Parda",
+            "description": "Raça parda é um grupo de pessoas que compartilham características físicas semelhantes, como a cor da pele."
+        },
+        {
+            "title": "Homossexualidade",
+            "description": "Homossexualidade é a atração romântica ou sexual entre pessoas do mesmo sexo."
+        },
+        {
+            "title": "Bissexualidade",
+            "description": "Bissexualidade é a atração romântica ou sexual entre pessoas de ambos os sexos."
+        },
+        {
+            "title": "Transexualidade",
+            "description": "Transexualidade é a identidade de gênero de uma pessoa que não corresponde ao sexo atribuído no nascimento."
+        },
+        {
+            "title": "Intersexualidade",
+            "description": "Intersexualidade é uma condição em que uma pessoa nasce com características sexuais que não se encaixam nas definições tradicionais de masculino ou feminino."
+        },
+        {
+            "title": "Heterossexualidade",
+            "description": "Heterossexualidade é a atração romântica ou sexual entre pessoas de sexos opostos."
+        },
+        {
+            "title": "Transtorno de Déficit de Atenção e Hiperatividade",
+            "description": "Transtorno de déficit de atenção e hiperatividade é um transtorno neurológico em que uma pessoa tem dificuldade em prestar atenção e controlar o comportamento."
+        },
+        {
+            "title": "Transtorno Obsessivo-Compulsivo",
+            "description": "Transtorno obsessivo-compulsivo é um transtorno de ansiedade em que uma pessoa tem pensamentos obsessivos e comportamentos compulsivos."
+        },
+        {
+            "title": "Capitalismo",
+            "description": "Capitalismo é um sistema econômico baseado na propriedade privada dos meios de produção e na busca do lucro."
+        },
+        {
+            "title": "Socialismo",
+            "description": "Socialismo é um sistema econômico baseado na propriedade coletiva dos meios de produção e na distribuição equitativa da riqueza."
+        },
+        {
+            "title": "Comunismo",
+            "description": "Comunismo é um sistema político baseado na propriedade coletiva dos meios de produção e na distribuição equitativa da riqueza."
+        },
+        {
+            "title": "Feminismo",
+            "description": "Feminismo é um movimento social e político que defende a igualdade de gênero e os direitos das mulheres."
+        },
+        {
+            "title": "Machismo",
+            "description": "Machismo é uma atitude de superioridade masculina em relação às mulheres."
+        }
+    ]
+}

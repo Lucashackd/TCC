@@ -17,11 +17,11 @@
     }
 
     body {
-      /* border: 1px solid blue; */
       width: 100%;
       text-align: center;
-      min-height: 100vh;
+      height: 100vh;
       background-color: #202020;
+      overflow: hidden;
     }
 
     #app {
@@ -29,114 +29,10 @@
       height: 100%;
     }
 
-    nav {
-      background-color: #191919;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      padding-left: 1rem;
-      padding-right: 1rem;
-      height: 56px;
-    }
-
-    nav ul li.navigation-menu {
-      width: calc(100% / 3);
-      display: flex;
-    }
-
-    nav ul li.navigation-menu.navigation-menu-logo {
-      justify-content: flex-start;
-    }
-
-    nav ul li.navigation-menu.navigation-menu-logo a {
-      display: flex;
-      align-items: center;
-    }
-
-    nav ul li.navigation-menu.navigation-menu-searchBar {
-      justify-content: center;
-    }
-
-    nav ul li.navigation-menu.navigation-menu-profile {
-      justify-content: flex-end;
-    }
-
-    nav ul li.navigation-menu.navigation-menu-profile a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    nav ul li .logo-short,
-    nav ul li .logo-full {
-      max-height: 40px;
-    }
-
-    nav ul li .search-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 450px;
-      height: 40px;
-    }
-
-    nav ul li .search-bar {
-      width: 90%;
-      height: 100%;
-      border-radius: 16px 0 0 16px;
-      border: 1px solid #404040;
-      background-color: #202020;
-      color: #c0c0c0;
-      padding: 0 16px;
-    }
-
-    nav ul li .search-container button {
-      width: 10%;
-      height: 100%;
-      text-align: center;
-      line-height: 40px;
-      background-color: #303030;
-      border: 1px solid #404040;
-      border-left: none;
-      border-radius: 0 16px 16px 0;
-      color: #c0c0c0;
-    }
-
-    nav ul li .search-container button:hover {
-      cursor: pointer;
-    }
-
-    nav ul li button .material-symbols-outlined {
-      font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
-    }
-
-    nav ul li button {
-      height: 34px;
-      width: fit-content;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 4px;
-      padding: 10px;
-      border: 1px solid #404040;
-      border-radius: 16px;
-      background: transparent;
-      color: #ffd700;
-    }
-
-    nav ul li button:hover {
-      cursor: pointer;
-    }
-
     main {
-      --heightNavUl: 57px;
       display: flex;
       width: 100%;
-      height: calc(100vh - var(--heightNavUl));
+      height: 100%;
     }
 
     .login-banner {
@@ -160,16 +56,32 @@
       background-color: #ffd700;
     }
 
+    .login-signup img {
+      width: 66%;
+      margin-bottom: 32px;
+    }
+
     .login-signup form {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      width: 55%;
+      width: 75%;
       padding: 32px;
+      background-color: #5ACBFF;
+      border-radius: 10px;
+      box-shadow: inset 0 0 2px 2px #00000025;
+      margin-bottom: 32px;
+    }
+
+    .login-signup form h1 {
+      font-family: 'Lato', sans-serif;
+      font-size: 24px;
+      font-weight: bold;
+      color: #2A2A2A;
+      margin-bottom: 24px;
     }
 
     form label {
-      padding-left: 8px;
       font-size: 12px;
       font-family: 'Lato', sans-serif;
       font-weight: bold;
@@ -181,18 +93,45 @@
       height: 40px;
       border: 1px solid #404040;
       border-radius: 10px;
-      padding: 0 16px;
-      margin-bottom: 16px;
+      padding: 0 8px;
+      margin-bottom: 8px;
     }
 
     form button {
       width: 100%;
-      height: 40px;
+      height: 56px;
       border: none;
       border-radius: 10px;
-      background-color: #3B5A66;
+      background-color: #FF5693;
       color: #FBFBFB;
+      font-family: 'Lato', sans-serif;
       font-weight: bold;
+      font-size: 1.25rem;
+      margin-top: 8px;
+      cursor: pointer;
+      text-transform: uppercase;
+    }
+
+    form .forgot-password {
+      width: 100%;
+      text-align: center;
+      font-size: 14px;
+      font-family: 'Lato', sans-serif;
+      font-weight: bold;
+      margin-top: 24px;
+    }
+
+    .link {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+
+    .sign-up {
+      width: 100%;
+      text-align: center;
+      font-size: 20px;
+      font-family: 'Lato', sans-serif;
+      font-weight: 600;
     }
   </style>
   <title>Login</title>
@@ -200,51 +139,26 @@
 
 <body>
   <div id="app">
-    <header>
-      <nav>
-        <ul>
-          <li class="navigation-menu navigation-menu-logo">
-            <a href="index.php">
-              <img class="logo-full" src="logo.svg" alt="logo" />
-            </a>
-          </li>
-          <li class="navigation-menu navigation-menu-searchBar">
-            <div class="search-container">
-              <input type="search" class="search-bar" placeholder="Pesquisar" />
-              <button>
-                <span class="material-symbols-outlined"> search </span>
-              </button>
-            </div>
-          </li>
-          <li class="navigation-menu navigation-menu-profile">
-            <a href="/login">
-              <button>
-                <span class="material-symbols-outlined"> account_circle </span>
-                Fazer login
-              </button>
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-
     <main>
       <div class="login-banner">
         <img src="banner-login.png" alt="">
       </div>
       <div class="login-signup">
+        <img src="/logo.svg" alt="logo">
         <form action="{{route('login.verify')}}" method="post">
           @csrf
+          <h1>Entre com sua conta</h1>
           <label for="email">E-mail</label>
           <input type="email" name="email" id="email" id="" placeholder="" required>
           <label for="password">Senha</label>
           <input type="password" name="password" id="password" placeholder="" required>
           <button type="submit">Entrar</button>
+          <span class="forgot-password">Esqueceu sua senha? <span class="link">Clique aqui!</span></span>
         </form>
+        <span class="sign-up">Não tem uma conta? <span class="link">Cadastre-se</span></span>
       </div>
     </main>
   </div>
-
 </body>
 
 </html>

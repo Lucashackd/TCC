@@ -61,6 +61,33 @@
       margin-bottom: 32px;
     }
 
+    .login-signup #signin {
+      display: inherit;
+      flex-direction: inherit;
+      justify-content: inherit;
+      align-items: inherit;
+      width: 100%;
+      background-color: inherit;
+    }
+
+    .login-signup #signup {
+      display: none;
+      flex-direction: inherit;
+      justify-content: inherit;
+      align-items: inherit;
+      width: 100%;
+      background-color: inherit;
+    }
+
+    .login-signup #password-recovery {
+      display: none;
+      flex-direction: inherit;
+      justify-content: inherit;
+      align-items: inherit;
+      width: 100%;
+      background-color: inherit;
+    }
+
     .login-signup form {
       display: flex;
       flex-direction: column;
@@ -126,7 +153,7 @@
       text-decoration: underline;
     }
 
-    .sign-up {
+    .sign {
       width: 100%;
       text-align: center;
       font-size: 20px;
@@ -145,20 +172,83 @@
       </div>
       <div class="login-signup">
         <img src="/logo.svg" alt="logo">
-        <form action="{{route('login.verify')}}" method="post">
-          @csrf
-          <h1>Entre com sua conta</h1>
-          <label for="email">E-mail</label>
-          <input type="email" name="email" id="email" id="" placeholder="" required>
-          <label for="password">Senha</label>
-          <input type="password" name="password" id="password" placeholder="" required>
-          <button type="submit">Entrar</button>
-          <span class="forgot-password">Esqueceu sua senha? <span class="link">Clique aqui!</span></span>
-        </form>
-        <span class="sign-up">Não tem uma conta? <span class="link">Cadastre-se</span></span>
+
+        <div id="signin">
+          <form action="{{route('login.verify')}}" method="post">
+            @csrf
+            <h1>Entre com sua conta</h1>
+            <label for="email">E-mail</label>
+            <input type="email" name="email" id="email" id="" placeholder="" required>
+            <label for="password">Senha</label>
+            <input type="password" name="password" id="password" placeholder="" required>
+            <button type="submit">Entrar</button>
+            <span class="forgot-password">Esqueceu sua senha? <span class="link">Clique aqui!</span></span>
+          </form>
+          <span class="sign">Não tem uma conta? <span class="link">Cadastre-se</span></span>
+        </div>
+
+        <div id="signup">
+          <form action="{{route('login.verify')}}" method="post">
+            @csrf
+            <h1>Crie sua conta</h1>
+            <label for="username">Nome de usuário</label>
+            <input type="text" name="username" id="username" placeholder="" required>
+            <label for="email">E-mail</label>
+            <input type="email" name="email" id="email" id="" placeholder="" required>
+            <label for="password">Senha</label>
+            <input type="password" name="password" id="password" placeholder="" required>
+            <label for="password-confirm">Confirme a senha</label>
+            <input type="password" name="password-confirm" id="password-confirm" placeholder="" required>
+            <button type="submit">Cadastrar</button>
+          </form>
+          <span class="sign">Já tem uma conta? <span class="link">Acesse</span></span>
+        </div>
+
+        <div id="password-recovery">
+          <form action="{{route('login.verify')}}" method="post">
+            @csrf
+            <h1>Informe o email cadastrado</h1>
+            <label for="email">E-mail</label>
+            <input type="email" name="email" id="email" id="" placeholder="" required>
+            <button type="submit">Recuperar</button>
+          </form>
+          <span class="sign">Não tem uma conta? <span class="link">Cadastre-se</span></span>
+        </div>
       </div>
     </main>
   </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const signInSpan = document.querySelector("#signin .sign .link");
+      const signUpSpan = document.querySelector("#signup .sign .link");
+      const forgotPasswordSpan = document.querySelector("#signin .forgot-password .link");
+      const passwordSignUpSpan = document.querySelector("#password-recovery .sign .link");
+      const signInDiv = document.getElementById("signin");
+      const signUpDiv = document.getElementById("signup");
+      const passwordRecoveryDiv = document.getElementById("password-recovery");
+
+      signInSpan.addEventListener("click", function() {
+        signInDiv.style.display = "none";
+        signUpDiv.style.display = "inherit";
+      });
+
+      signUpSpan.addEventListener("click", function() {
+        signUpDiv.style.display = "none";
+        signInDiv.style.display = "inherit";
+      });
+
+      forgotPasswordSpan.addEventListener("click", function() {
+        signInDiv.style.display = "none";
+        passwordRecoveryDiv.style.display = "inherit";
+      });
+
+      passwordSignUpSpan.addEventListener("click", function() {
+        passwordRecoveryDiv.style.display = "none";
+        signUpDiv.style.display = "inherit";
+      });
+    });
+  </script>
 </body>
 
 </html>

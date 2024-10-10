@@ -7,7 +7,6 @@ use App\Models\User;
 use App\Models\Video;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
@@ -26,6 +25,17 @@ class AuthController extends Controller
             return view('welcome', ['users' => User::find($user->id), 'videos' => Video::all()->sortByDesc('created_at')]);
         } else {
             dd('Login failed');
+        }
+    }
+
+    public function signup(Request $request) {
+        $data = $request->all();
+        if($data['password'] === $data['password-confirm']) {
+            if(User::create($data)) {
+                return redirect('/login');
+            } else {
+                dd('Erro ao cadastrar usuário');
+            }
         }
     }
 }

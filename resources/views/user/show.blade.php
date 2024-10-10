@@ -34,6 +34,6 @@
         </tbody>
     </table>
     <br>
-    <a href="/users">&#9664; Voltar</a>
+    <a href="/">&#9664; Voltar</a>
 </body>
 </html>

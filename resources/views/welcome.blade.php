@@ -69,6 +69,63 @@
             color: inherit;
         }
 
+        nav ul li.navigation-menu.navigation-menu-profile #profile-modal {
+            position: absolute;
+            top: 64px;
+            right: 16px;
+            display: none;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 300px;
+            padding: 16px;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        nav ul li.navigation-menu.navigation-menu-profile #profile-modal button.close {
+             align-self: flex-end;
+             border: none;
+             color: #FF5693;
+        }
+
+        nav ul li.navigation-menu.navigation-menu-profile #profile-modal .superior {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-left: 16px;
+            margin-bottom: 16px;
+            gap: 8px;
+            width: 80%;
+        }
+
+        nav ul li.navigation-menu.navigation-menu-profile #profile-modal div.divide {
+            width: 100%;
+            height: 0;
+            border-top: 1px solid #000;
+            margin-bottom: 16px
+        }
+
+        nav ul li.navigation-menu.navigation-menu-profile #profile-modal .inferior {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-left: 16px;
+            width: 80%;
+            gap: 8px;
+        }
+
+        nav ul li.navigation-menu.navigation-menu-profile #profile-modal .inferior div {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        nav ul li.navigation-menu.navigation-menu-profile #profile-modal .superior div {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
         nav ul li .logo-short,
         nav ul li .logo-full {
             max-height: 40px;
@@ -353,13 +410,44 @@
                     </li>
                     <li class="navigation-menu navigation-menu-profile">
                         @if (Auth::check())
-                        <a href="/profile/{{Auth::user()->id}}">
-                            <button>
+                            <button onclick="document.getElementById('profile-modal').style.display='flex'">
                                 <span class="material-symbols-outlined">
                                     account_circle
                                 </span>
                                 {{ Auth::user()->name }}
                             </button>
+
+                            <div id="profile-modal">
+                                <button class="close" onclick="document.getElementById('profile-modal').style.display='none'">
+                                    <span class="material-symbols-outlined">
+                                        close
+                                    </span>
+                                </button>
+
+                                <div class="superior">
+                                    <div>
+                                        <span class="material-symbols-outlined">person</span>
+                                        <a href="/profile/{{Auth::user()->id}}">Acessar Canal</a>
+                                    </div>
+
+                                    <div>
+                                        <span class="material-symbols-outlined">edit</span>
+                                        <a href="">Editar perfil</a>
+                                    </div>
+
+                                </div>
+                                <div class="divide"></div>
+                                <div class="inferior">
+                                    <div>
+                                        <span class="material-symbols-outlined">video_call</span>
+                                        <a href="">Adicionar vídeo</a>
+                                    </div>
+                                    <div>
+                                        <span class="material-symbols-outlined">logout</span>
+                                        <a href="">Sair</a>
+                                    </div>
+                                </div>
+                            </div>
                         </a>
                         @else
                         <a href="/login">
@@ -429,7 +517,10 @@
             </div>
         </main>
     </div>
-    <!-- <script type="module" src="/main.js"></script> -->
+
+    <script>
+
+    </script>
 </body>
 
 </html>

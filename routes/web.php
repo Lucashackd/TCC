@@ -14,9 +14,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/ola', [HomeController::class, 'index']);
 
 # Users
-### CREATE
-Route::get('/user', [UserController::class, 'create'])->name('user.create');
-Route::post('/user', [UserController::class, 'store']);
+### SIGNUP
+Route::get('/login', [AuthController::class, 'form'])->name('login.form');
+Route::post('/login', [AuthController::class, 'signup'])->name('signup.verify');
 ### READ
 Route::get('/users', [UserController::class, 'index']);
 Route::get('/profile/{id}', [UserController::class, 'show']);

@@ -188,11 +188,11 @@
         </div>
 
         <div id="signup">
-          <form action="{{route('login.verify')}}" method="post">
+          <form action="{{route('signup.verify')}}" method="post">
             @csrf
             <h1>Crie sua conta</h1>
-            <label for="username">Nome de usuário</label>
-            <input type="text" name="username" id="username" placeholder="" required>
+            <label for="name">Nome de usuário</label>
+            <input type="text" name="name" id="name" placeholder="" required>
             <label for="email">E-mail</label>
             <input type="email" name="email" id="email" id="" placeholder="" required>
             <label for="password">Senha</label>

@@ -83,9 +83,9 @@
         }
 
         nav ul li.navigation-menu.navigation-menu-profile #profile-modal button.close {
-             align-self: flex-end;
-             border: none;
-             color: #FF5693;
+            align-self: flex-end;
+            border: none;
+            color: #FF5693;
         }
 
         nav ul li.navigation-menu.navigation-menu-profile #profile-modal .superior {
@@ -410,44 +410,45 @@
                     </li>
                     <li class="navigation-menu navigation-menu-profile">
                         @if (Auth::check())
-                            <button onclick="document.getElementById('profile-modal').style.display='flex'">
+                        <button onclick="document.getElementById('profile-modal').style.display='flex'">
+                            <span class="material-symbols-outlined">
+                                account_circle
+                            </span>
+                            {{ Auth::user()->name }}
+                        </button>
+
+                        <div id="profile-modal">
+                            <button class="close" onclick="document.getElementById('profile-modal').style.display='none'">
                                 <span class="material-symbols-outlined">
-                                    account_circle
+                                    close
                                 </span>
-                                {{ Auth::user()->name }}
                             </button>
 
-                            <div id="profile-modal">
-                                <button class="close" onclick="document.getElementById('profile-modal').style.display='none'">
-                                    <span class="material-symbols-outlined">
-                                        close
-                                    </span>
-                                </button>
-
-                                <div class="superior">
-                                    <div>
-                                        <span class="material-symbols-outlined">person</span>
-                                        <a href="/profile/{{Auth::user()->id}}">Acessar Canal</a>
-                                    </div>
-
-                                    <div>
-                                        <span class="material-symbols-outlined">edit</span>
-                                        <a href="">Editar perfil</a>
-                                    </div>
-
+                            <div class="superior">
+                                <div>
+                                    <span class="material-symbols-outlined">person</span>
+                                    <a href="/profile/{{Auth::user()->id}}">Acessar Canal</a>
                                 </div>
-                                <div class="divide"></div>
-                                <div class="inferior">
-                                    <div>
-                                        <span class="material-symbols-outlined">video_call</span>
-                                        <a href="">Adicionar vídeo</a>
-                                    </div>
-                                    <div>
-                                        <span class="material-symbols-outlined">logout</span>
-                                        <a href="">Sair</a>
-                                    </div>
+
+                                <div>
+                                    <span class="material-symbols-outlined">edit</span>
+                                    <a href="">Editar perfil</a>
+                                </div>
+
+                            </div>
+                            <div class="divide"></div>
+                            <div class="inferior">
+                                <div>
+                                    <span class="material-symbols-outlined">video_call</span>
+                                    <a href="">Adicionar vídeo</a>
+                                </div>
+                                <div>
+                                    <form action="{{route('logout')}}" id="logout-form" method="POST" style="display: none;">@csrf</form>
+                                    <span class="material-symbols-outlined">logout</span>
+                                    <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Sair</a>
                                 </div>
                             </div>
+                        </div>
                         </a>
                         @else
                         <a href="/login">

@@ -28,7 +28,11 @@ Route::get('/user/{id}/delete', [UserController::class, 'delete'])->name('user.d
 Route::post('/user/{id}/delete_confirmation', [UserController::class, 'confirm_delete'])->name('user.delete_confirmation');
 ####LOGIN
 Route::get('/login', [AuthController::class, 'form'])->name('login.form');
-Route::post('/signin', [AuthController::class, 'login'])->name('login.verify');
+Route::post('/', [AuthController::class, 'login'])->name('login.verify');
+
+Route::group(['middleware' => ['auth:sanctum']], function () {
+  Route::post('/logout', [AuthController::class, 'logout'])->name('logout'); //LOGOUT
+});
 
 # Videos
 Route::get('/', [VideoController::class, 'index']);

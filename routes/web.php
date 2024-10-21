@@ -32,6 +32,8 @@ Route::post('/', [AuthController::class, 'login'])->name('login.verify');
 
 Route::group(['middleware' => ['auth:sanctum']], function () {
   Route::post('/logout', [AuthController::class, 'logout'])->name('logout'); //LOGOUT
+  Route::get('/add-video', [VideoController::class, 'create'])->name('video.create'); //ADD VIDEO
+  Route::post('/video-upload', [VideoController::class, 'store'])->name('video.upload'); //UPLOAD VIDEO
 });
 
 # Videos

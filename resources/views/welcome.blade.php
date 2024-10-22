@@ -440,7 +440,7 @@
                             <div class="inferior">
                                 <div>
                                     <span class="material-symbols-outlined">video_call</span>
-                                    <a href="">Adicionar vídeo</a>
+                                    <a href="{{ route('video.create') }}">Adicionar vídeo</a>
                                 </div>
                                 <div>
                                     <form action="{{route('logout')}}" id="logout-form" method="POST" style="display: none;">@csrf</form>

@@ -35,14 +35,10 @@ class VideoController extends Controller
     // Salva vídeo no db
     public function store(Request $request)
     {
-        $request->validate([
-            'video' => 'required|file|mimes:mp4,mov,ogg,qt|max:20000', // Ajuste as validações conforme necessário
-            // 'thumbnail' => 'required|file|mimes:jpeg,jpg,png|max:2000',
-        ]);
-
         try {
             $videoPath = $request->file('video')->store('videos', ['disk' => 's3']);
             $thumbnailPath = $request->file('thumbnail')->store('thumbnails', ['disk' => 's3']);
+            dd($videoPath, $thumbnailPath);
             if ($videoPath && $thumbnailPath) {
                 Video::create([
                     'title' => $request->title,
@@ -54,7 +50,7 @@ class VideoController extends Controller
             }
             return view('video.show', ['videos' => Video::find($this->video->id)]);
         } catch (\Exception $e) {
-            return redirect()->back()->with('error', 'Erro ao salvar vídeo: ' . $e->getMessage());
+            dd($e);
         }
         // dd($path);
         // dd(Storage::cloud()->temporaryUrl($path, now()->addMinutes(5)));

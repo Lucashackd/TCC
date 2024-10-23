@@ -36,6 +36,7 @@ class VideoController extends Controller
     public function store(Request $request)
     {
         try {
+            dd($request->all());
             $videoPath = $request->file('video')->store('videos', ['disk' => 's3']);
             $thumbnailPath = $request->file('thumbnail')->store('thumbnails', ['disk' => 's3']);
             dd($videoPath, $thumbnailPath);

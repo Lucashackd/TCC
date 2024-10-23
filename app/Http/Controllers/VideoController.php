@@ -37,14 +37,14 @@ class VideoController extends Controller
     {
         try {
             if ($request->file('video')->isValid()) {
-                $videoPath = $request->file('video')->store('videos', 'cloud');
+                $videoPath = $request->file('video')->store('videos', 's3');
             } else {
                 // Trate o erro de upload
                 return response()->json(['error' => 'Erro no upload do vídeo'], 400);
             }
 
             if ($request->file('thumbnail')->isValid()) {
-                $thumbnailPath = $request->file('thumbnail')->store('thumbnails', 'cloud');
+                $thumbnailPath = $request->file('thumbnail')->store('thumbnails', 's3');
             } else {
                 // Trate o erro de upload
                 return response()->json(['error' => 'Erro no upload da miniatura'], 400);
@@ -58,7 +58,8 @@ class VideoController extends Controller
                     'user_id' => Auth::id(),
                 ]);
             }
-            return view('video.show', ['videos' => Video::find($this->video->id)]);
+            dd('Vídeo salvo com sucesso');
+            // return view('video.show', ['videos' => Video::find($this->video->id)]);
         } catch (\Exception $e) {
             dd($e);
         }

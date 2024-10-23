@@ -36,10 +36,19 @@ class VideoController extends Controller
     public function store(Request $request)
     {
         try {
-            dd($request->all());
-            $videoPath = $request->file('video')->store('videos', ['disk' => 's3']);
-            $thumbnailPath = $request->file('thumbnail')->store('thumbnails', ['disk' => 's3']);
-            dd($videoPath, $thumbnailPath);
+            if ($request->file('video')->isValid()) {
+                $videoPath = $request->file('video')->store('videos', 'cloud');
+            } else {
+                // Trate o erro de upload
+                return response()->json(['error' => 'Erro no upload do vídeo'], 400);
+            }
+
+            if ($request->file('thumbnail')->isValid()) {
+                $thumbnailPath = $request->file('thumbnail')->store('thumbnails', 'cloud');
+            } else {
+                // Trate o erro de upload
+                return response()->json(['error' => 'Erro no upload da miniatura'], 400);
+            }
             if ($videoPath && $thumbnailPath) {
                 Video::create([
                     'title' => $request->title,

@@ -491,7 +491,7 @@
                     <a class="select-video" href="watch/{{$video->id}}">
                         <div class="feed-video">
                             <div class="thumbnail">
-                                <img class="video-thumbnail" src="/videos/{{$video->user_id}}/{{$video->id}}/thumbnail.png" alt="">
+                                <img class="video-thumbnail" src="{{ Storage::cloud()->temporaryUrl($video->thumbnail, now()->addMinutes(5)) }}" alt="">
                             </div>
 
                             <div class="video-info">

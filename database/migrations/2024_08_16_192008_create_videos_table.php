@@ -17,6 +17,7 @@ return new class extends Migration
             $table->text('title');
             $table->text('description')->default(null);;
             $table->text('path');
+            $table->text('thumbnail');
 
             $table->foreignId('user_id')->constrained()->cascadeOnDelete();
         });

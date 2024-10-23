@@ -310,7 +310,7 @@
             <div class="watch-main">
                 <div class="video-player">
                     <video width="955" height="537" controls>
-                        <source src="{{ asset('videos/25/13/video.mp4') }}" type="video/mp4">
+                        <source src="{{ Storage::cloud()->temporaryUrl($videos->path, now()->addMinutes(5)) }}" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>

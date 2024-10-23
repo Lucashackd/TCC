@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Flag;
 use App\Models\Video;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class VideoController extends Controller
 {
@@ -34,22 +36,30 @@ class VideoController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title' => 'required',
-            'description' => 'required',
-            'video' => 'required|mimes:mp4|max:20000'
+            'video' => 'required|file|mimes:mp4,mov,ogg,qt|max:20000', // Ajuste as validações conforme necessário
+            'title' => 'required|string|max:255',
+            'description' => 'required|string|max:255',
+            // 'thumbnail' => 'required|file|mimes:jpeg,jpg,png|max:2000',
         ]);
 
-        $video = $request->file('video');
-        $videoName = time() . '.' . $video->extension();
-        $video->move(public_path('videos'), $videoName);
-
-        $this->video->title = $request->title;
-        $this->video->description = $request->description;
-        $this->video->video = $videoName;
-        $this->video->user_id = auth()->user()->id;
-        $this->video->save();
-
-        return redirect()->route('home')->with('success', 'Video uploaded successfully');
+        try {
+            $videoPath = $request->file('video')->store('videos', ['disk' => 's3']);
+            $thumbnailPath = $request->file('thumbnail')->store('thumbnails', ['disk' => 's3']);
+            if ($videoPath && $thumbnailPath) {
+                Video::create([
+                    'title' => $request->title,
+                    'description' => $request->description,
+                    'path' => $videoPath,
+                    'thumbnail' => $thumbnailPath,
+                    'user_id' => Auth::id(),
+                ]);
+                return view('video.show', ['videos' => Video::find($this->video->id)]);
+            }
+        } catch (\Exception $e) {
+            dd('deu ruim');
+        }
+        // dd($path);
+        // dd(Storage::cloud()->temporaryUrl($path, now()->addMinutes(5)));
     }
 
     // Retorna página de criação de vídeo

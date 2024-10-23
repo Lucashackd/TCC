@@ -24,7 +24,7 @@ class VideoRequest extends FormRequest
         return [
             'title' => 'required|string|max:75',
             'description' => 'string',
-            'path' => 'required|url',
+            'path' => 'required',
         ];
     }
 
@@ -34,7 +34,6 @@ class VideoRequest extends FormRequest
             'title.required' => 'O campo título é obrigatório',
             'title.max' => 'O campo título deve ter no máximo :max caracteres',
             'path.required' => 'A URL é obrigatória',
-            'path.url' => 'A URL informada não é válida',
         ];
     }
 }

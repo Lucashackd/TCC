@@ -37,8 +37,6 @@ class VideoController extends Controller
     {
         $request->validate([
             'video' => 'required|file|mimes:mp4,mov,ogg,qt|max:20000', // Ajuste as validações conforme necessário
-            'title' => 'required|string|max:255',
-            'description' => 'required|string|max:255',
             // 'thumbnail' => 'required|file|mimes:jpeg,jpg,png|max:2000',
         ]);
 

@@ -35,6 +35,7 @@ class VideoController extends Controller
     // Salva vídeo no db
     public function store(Request $request)
     {
+        dd('chegou');
         $request->validate([
             'video' => 'required|file|mimes:mp4,mov,ogg,qt|max:20000', // Ajuste as validações conforme necessário
             // 'thumbnail' => 'required|file|mimes:jpeg,jpg,png|max:2000',
